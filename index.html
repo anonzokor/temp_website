@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header" style="font-size: 100px">
+        Sasha's a badass mommy.
+    </h1>
+
+    <script>
+        var header = document.getElementById('header');
+
+        var colors = ['#FF5733', '#33FF57', '#5733FF', '#33FFFF', '#FFFF33', '#FF33FF'];
+        
+        function changeColors() {
+
+        
+        var letters = text.split('');
+
+        var styledText = '';
+
+        for (var i = 0; i < letters.length; i++) {
+            var color = colors[math.floor(Math.random() * colors.length)];
+
+            styledText += '<span style="color: ' + color + ';">' + letters[i] + '</span>';
+        }
+        h1.innerHTML = styledText;
+    }
+
+    changeColors();
+
+    setInterval(changeColors, 5000);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Sasha's a badass mommy.
+    </title>
+</head>
+<body>
+    <h1 style="font-size: 100px" id="colorChangeHeader">Sasha's a badass mommy.</h1>
+
+    <!-- JavaScript to change header text color -->
+    <script>
+        // Get the header element by its ID
+        var header = document.getElementById('colorChangeHeader');
+    
+        // Array to hold colors (you can customize these)
+        var colors = ['#FF5733', '#33FF57', '#5733FF', '#33FFFF', '#FF33FF']; 
+    
+        // Function to change colors
+        function changeColors() {
+            // Get the text content of the header
+            var text = header.textContent;
+    
+            // Split the text into an array of characters
+            var letters = text.split('');
+    
+            // Variable to store the new HTML with styled letters
+            var styledText = '';
+    
+            // Loop through each letter
+            for (var i = 0; i < letters.length; i++) {
+                // Randomly select a color from the array
+                var color = colors[Math.floor(Math.random() * colors.length)];
+    
+                // Wrap the letter in a span with style
+                styledText += '<span style="color: ' + color + ';">' + letters[i] + '</span>';
+            }
+    
+            // Replace the header's content with the styled letters
+            header.innerHTML = styledText;
+        }
+    
+        // Call the changeColors function initially
+        changeColors();
+    
+        // Set interval to change colors every 2 seconds
+        setInterval(changeColors, 2000);
+    </script>
+    
+</body>
+</html>
